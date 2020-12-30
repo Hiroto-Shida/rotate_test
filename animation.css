@@ -1,7 +1,16 @@
-#gm {
+/* 参考になりそうなページ
+
+https://yumeirodesign.jp/blog/201310/csstransforms-4tips.html
+
+https://coliss.com/articles/build-websites/operation/css/4-reasons-z-index-isnt-working.html
+
+*/
+
+#moai1 {
     position: absolute;
     top: 10px;
     left: 10px;
+    filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
     overflow: hidden;
     animation: test1 4s linear infinite;
 }
@@ -13,11 +22,12 @@
     100% {transform: rotateY(0deg) }
 }
 
-#moai {
+#moai2 {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    animation: test2 1s linear infinite;
+    top: 40px;
+    left: 40px;
+    filter: invert(81%) sepia(81%) saturate(633%) hue-rotate(359deg) brightness(106%) contrast(105%);
+    animation: test2 2s linear infinite;
 }
 
 @keyframes test2 {
@@ -25,8 +35,8 @@
     100% {transform: rotate(360deg) }
 }
 
-#kusudama {
+#moai3 {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
