@@ -1,42 +1,31 @@
-/* 参考になりそうなページ
-
-https://yumeirodesign.jp/blog/201310/csstransforms-4tips.html
-
-https://coliss.com/articles/build-websites/operation/css/4-reasons-z-index-isnt-working.html
-
-*/
-
-#moai1 {
+ /* 500円玉 */
+#coin-500 {
     position: absolute;
+    width: 300px;
     top: 10px;
     left: 10px;
-    filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
-    overflow: hidden;
-    animation: test1 4s linear infinite;
+    z-index: 1;
+    transform: translateZ(1px);
+    animation: Yrot 2s linear infinite;
 }
-@keyframes test1 {
-    0% {transform: rotateY(0deg) }
-    25% {transform: rotateY(60deg) }
-    50% {transform: rotateY(0deg) }
-    75% {transform: rotateY(-60deg) }
-    100% {transform: rotateY(0deg) }
+@keyframes Yrot {
+    0%   {transform: rotateY(0deg) }
+    100% {transform: rotateY(360deg) }
 }
 
-#moai2 {
+
+
+/* 10円玉 */
+#coin-10 {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    filter: invert(81%) sepia(81%) saturate(633%) hue-rotate(359deg) brightness(106%) contrast(105%);
-    animation: test2 2s linear infinite;
+    width: 200px;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+    transform: translateZ(2px);
+    animation: Zrot 2s linear infinite;
 }
-
-@keyframes test2 {
+@keyframes Zrot {
     0% {transform: rotate(0deg) }
     100% {transform: rotate(360deg) }
-}
-
-#moai3 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
